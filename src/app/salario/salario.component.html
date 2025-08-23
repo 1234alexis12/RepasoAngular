@@ -1,0 +1,93 @@
+<div class="container mt-5">
+  <h2>Cálculo de Salario</h2>
+  
+  <div class="row">
+    <div class="col-md-6">
+      <form [formGroup]="salarioForm" (ngSubmit)="onSubmit()">
+        
+        <!-- Campo Código Empleado -->
+        <div class="form-group mb-3">
+          <label for="codigoEmpleado">Código del Empleado:</label>
+          <input type="text" id="codigoEmpleado" class="form-control" formControlName="codigoEmpleado" placeholder="Código del empleado">
+          <div *ngIf="salarioForm.get('codigoEmpleado')?.invalid && (salarioForm.get('codigoEmpleado')?.touched || salarioForm.get('codigoEmpleado')?.dirty)" class="text-danger">
+            El código del empleado es requerido.
+          </div>
+        </div>
+
+        <!-- Campo Nombre Empleado -->
+        <div class="form-group mb-3">
+          <label for="nombreEmpleado">Nombre del Empleado:</label>
+          <input type="text" id="nombreEmpleado" class="form-control" formControlName="nombreEmpleado" placeholder="Nombre completo del empleado">
+          <div *ngIf="salarioForm.get('nombreEmpleado')?.invalid && (salarioForm.get('nombreEmpleado')?.touched || salarioForm.get('nombreEmpleado')?.dirty)" class="text-danger">
+            El nombre del empleado es requerido.
+          </div>
+          <small class="text-muted" *ngIf="salarioForm.get('nombreEmpleado')?.value">
+            {{ salarioForm.get('nombreEmpleado')?.value | mayusculas }}
+          </small>
+        </div>
+
+        <!-- Campo Sueldo Base -->
+        <div class="form-group mb-3">
+          <label for="sueldoBase">Sueldo Base:</label>
+          <input type="number" id="sueldoBase" class="form-control" formControlName="sueldoBase" placeholder="0.00" step="0.01" min="0">
+          <div *ngIf="salarioForm.get('sueldoBase')?.invalid && (salarioForm.get('sueldoBase')?.touched || salarioForm.get('sueldoBase')?.dirty)" class="text-danger">
+            El sueldo base es requerido y debe ser mayor a 0.
+          </div>
+        </div>
+
+        <!-- Botón Submit -->
+        <button type="submit" class="btn btn-primary" [disabled]="salarioForm.invalid">Calcular y Guardar</button>
+        
+      </form>
+    </div>
+
+    <div class="col-md-6">
+      <!-- Resumen de Cálculos -->
+      <div class="card">
+        <div class="card-header bg-primary text-white">
+          <h5>Resumen de Salario</h5>
+        </div>
+        <div class="card-body">
+          <div class="row mb-2">
+            <div class="col-8"><strong>Sueldo Base:</strong></div>
+            <div class="col-4 text-end">{{ salarioForm.get('sueldoBase')?.value | moneda }}</div>
+          </div>
+          
+          <div class="row mb-2 text-success">
+            <div class="col-8">Bonificación (12%):</div>
+            <div class="col-4 text-end">{{ bonificacion | moneda }}</div>
+          </div>
+          
+          <div class="row mb-2">
+            <div class="col-8"><strong>Sueldo Bruto:</strong></div>
+            <div class="col-4 text-end"><strong>{{ sueldoBruto | moneda }}</strong></div>
+          </div>
+          
+          <hr>
+          
+          <div class="row mb-2 text-danger">
+            <div class="col-8">Descuento AFP (13%):</div>
+            <div class="col-4 text-end">-{{ descuentoAFP | moneda }}</div>
+          </div>
+          
+          <div class="row mb-2 text-danger">
+            <div class="col-8">Seguro Social (9%):</div>
+            <div class="col-4 text-end">-{{ descuentoSeguro | moneda }}</div>
+          </div>
+          
+          <div class="row mb-2 text-danger">
+            <div class="col-8"><strong>Total Descuentos:</strong></div>
+            <div class="col-4 text-end"><strong>-{{ totalDescuentos | moneda }}</strong></div>
+          </div>
+          
+          <hr>
+          
+          <div class="row mb-2 bg-light p-2 rounded">
+            <div class="col-8"><strong>TOTAL A PAGAR:</strong></div>
+            <div class="col-4 text-end"><strong class="text-success fs-5">{{ totalAPagar | moneda }}</strong></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

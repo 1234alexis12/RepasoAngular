@@ -1,0 +1,76 @@
+
+<div class="container mt-5">
+  <h2>Registro de Empleado</h2>
+  <form [formGroup]="empleadoForm" (ngSubmit)="onSubmit()">
+    
+    <!-- Campo Código -->
+    <div class="form-group mb-3">
+      <label for="codigo">Código:</label>
+      <input type="text" id="codigo" class="form-control" formControlName="codigo" placeholder="Ingresa el código del empleado">
+      <div *ngIf="empleadoForm.get('codigo')?.invalid && (empleadoForm.get('codigo')?.touched || empleadoForm.get('codigo')?.dirty)" class="text-danger">
+        El código es requerido.
+      </div>
+    </div>
+
+    <!-- Campo Nombre -->
+    <div class="form-group mb-3">
+      <label for="nombre">Nombre:</label>
+      <input type="text" id="nombre" class="form-control" formControlName="nombre" placeholder="Ingresa el nombre">
+      <div *ngIf="empleadoForm.get('nombre')?.invalid && (empleadoForm.get('nombre')?.touched || empleadoForm.get('nombre')?.dirty)" class="text-danger">
+        El nombre es requerido.
+      </div>
+      <!-- Vista previa con pipe -->
+      <small class="text-muted" *ngIf="empleadoForm.get('nombre')?.value">
+        Vista previa: {{ empleadoForm.get('nombre')?.value | mayusculas }}
+      </small>
+    </div>
+
+    <!-- Campo Apellidos -->
+    <div class="form-group mb-3">
+      <label for="apellidos">Apellidos:</label>
+      <input type="text" id="apellidos" class="form-control" formControlName="apellidos" placeholder="Ingresa los apellidos">
+      <div *ngIf="empleadoForm.get('apellidos')?.invalid && (empleadoForm.get('apellidos')?.touched || empleadoForm.get('apellidos')?.dirty)" class="text-danger">
+        Los apellidos son requeridos.
+      </div>
+      <!-- Vista previa con pipe -->
+      <small class="text-muted" *ngIf="empleadoForm.get('apellidos')?.value">
+        Vista previa: {{ empleadoForm.get('apellidos')?.value | mayusculas }}
+      </small>
+    </div>
+
+    <!-- Campo Email -->
+    <div class="form-group mb-3">
+      <label for="email">Email:</label>
+      <input type="email" id="email" class="form-control" formControlName="email" placeholder="Ingresa el email">
+      <div *ngIf="empleadoForm.get('email')?.invalid && (empleadoForm.get('email')?.touched || empleadoForm.get('email')?.dirty)" class="text-danger">
+        Debe ser un email válido.
+      </div>
+    </div>
+
+    <!-- Campo Celular -->
+    <div class="form-group mb-3">
+      <label for="celular">Celular:</label>
+      <input type="tel" id="celular" class="form-control" formControlName="celular" placeholder="Ingresa el número de celular (9 dígitos)">
+      <div *ngIf="empleadoForm.get('celular')?.invalid && (empleadoForm.get('celular')?.touched || empleadoForm.get('celular')?.dirty)" class="text-danger">
+        El celular debe tener 9 dígitos.
+      </div>
+    </div>
+
+    <!-- Campo Dirección -->
+    <div class="form-group mb-3">
+      <label for="direccion">Dirección:</label>
+      <textarea id="direccion" class="form-control" formControlName="direccion" rows="2" placeholder="Ingresa la dirección"></textarea>
+      <div *ngIf="empleadoForm.get('direccion')?.invalid && (empleadoForm.get('direccion')?.touched || empleadoForm.get('direccion')?.dirty)" class="text-danger">
+        La dirección es requerida.
+      </div>
+      <!-- Vista previa con pipe -->
+      <small class="text-muted" *ngIf="empleadoForm.get('direccion')?.value">
+        Vista previa: {{ empleadoForm.get('direccion')?.value | mayusculas }}
+      </small>
+    </div>
+
+    <!-- Botón Submit -->
+    <button type="submit" class="btn btn-primary" [disabled]="empleadoForm.invalid">Registrar Empleado</button>
+    
+  </form>
+</div>

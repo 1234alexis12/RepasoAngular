@@ -1,1 +1,387 @@
-<p>Informacion de la empresa</p>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nosotros - Nuestra Empresa</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.0/font/bootstrap-icons.min.css" rel="stylesheet">
+    <style>
+        .hero-section {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 100px 0;
+        }
+        .card-custom {
+            border: none;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+        .card-custom:hover {
+            transform: translateY(-5px);
+        }
+        .team-img {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+        }
+        .stats-section {
+            background-color: #f8f9fa;
+        }
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #667eea;
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <h1 class="display-4 fw-bold mb-4">Sobre Nosotros</h1>
+                    <p class="lead mb-4">Somos una empresa comprometida con la excelencia, la innovación y el crecimiento sostenible. Desde nuestros inicios, hemos trabajado para transformar ideas en realidades que generen valor para nuestros clientes.</p>
+                    <button class="btn btn-light btn-lg">Conoce más</button>
+                </div>
+                <div class="col-lg-6 text-center">
+                    <img src="https://via.placeholder.com/500x400/667eea/ffffff?text=Nuestra+Empresa" alt="Empresa" class="img-fluid rounded shadow">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Misión, Visión, Valores -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row text-center mb-5">
+                <div class="col-12">
+                    <h2 class="display-5 fw-bold mb-3">Nuestra Filosofía</h2>
+                    <p class="lead text-muted">Los principios que guían nuestro trabajo día a día</p>
+                </div>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card card-custom h-100">
+                        <div class="card-body text-center p-4">
+                            <i class="bi bi-bullseye fs-1 text-primary mb-3"></i>
+                            <h4 class="fw-bold mb-3">Misión</h4>
+                            <p class="text-muted">Proporcionar soluciones innovadoras y de alta calidad que superen las expectativas de nuestros clientes, contribuyendo al crecimiento y éxito de sus negocios.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card card-custom h-100">
+                        <div class="card-body text-center p-4">
+                            <i class="bi bi-eye fs-1 text-success mb-3"></i>
+                            <h4 class="fw-bold mb-3">Visión</h4>
+                            <p class="text-muted">Ser reconocidos como líderes en nuestro sector, destacando por nuestra capacidad de innovación, compromiso con la excelencia y responsabilidad social.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card card-custom h-100">
+                        <div class="card-body text-center p-4">
+                            <i class="bi bi-heart fs-1 text-danger mb-3"></i>
+                            <h4 class="fw-bold mb-3">Valores</h4>
+                            <p class="text-muted">Integridad, transparencia, trabajo en equipo, innovación continua y compromiso con la satisfacción del cliente son los pilares de nuestra cultura empresarial.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Historia -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <img src="https://via.placeholder.com/600x400/28a745/ffffff?text=Nuestra+Historia" alt="Historia" class="img-fluid rounded shadow">
+                </div>
+                <div class="col-lg-6">
+                    <h2 class="display-5 fw-bold mb-4">Nuestra Historia</h2>
+                    <p class="mb-4">Fundada en 2010, nuestra empresa nació con la visión de revolucionar el mercado a través de soluciones innovadoras y un servicio excepcional al cliente.</p>
+                    
+                    <div class="timeline">
+                        <div class="d-flex mb-3">
+                            <div class="bg-primary rounded-circle p-2 me-3" style="width: 40px; height: 40px;">
+                                <i class="bi bi-star-fill text-white"></i>
+                            </div>
+                            <div>
+                                <h6 class="fw-bold">2010 - Fundación</h6>
+                                <p class="text-muted mb-0">Inicio de operaciones con un equipo de 5 personas</p>
+                            </div>
+                        </div>
+                        <div class="d-flex mb-3">
+                            <div class="bg-success rounded-circle p-2 me-3" style="width: 40px; height: 40px;">
+                                <i class="bi bi-graph-up text-white"></i>
+                            </div>
+                            <div>
+                                <h6 class="fw-bold">2015 - Expansión</h6>
+                                <p class="text-muted mb-0">Crecimiento a 50 empleados y apertura de nueva sede</p>
+                            </div>
+                        </div>
+                        <div class="d-flex">
+                            <div class="bg-info rounded-circle p-2 me-3" style="width: 40px; height: 40px;">
+                                <i class="bi bi-award text-white"></i>
+                            </div>
+                            <div>
+                                <h6 class="fw-bold">2020 - Reconocimiento</h6>
+                                <p class="text-muted mb-0">Premio a la excelencia empresarial</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Estadísticas -->
+    <section class="stats-section py-5">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-12 mb-5">
+                    <h2 class="display-5 fw-bold">Nuestros Logros</h2>
+                    <p class="lead text-muted">Números que reflejan nuestro compromiso y crecimiento</p>
+                </div>
+            </div>
+            <div class="row text-center">
+                <div class="col-md-3 mb-4">
+                    <div class="stat-number">500+</div>
+                    <h5>Clientes Satisfechos</h5>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <div class="stat-number">15</div>
+                    <h5>Años de Experiencia</h5>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <div class="stat-number">100+</div>
+                    <h5>Empleados</h5>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <div class="stat-number">24/7</div>
+                    <h5>Soporte Técnico</h5>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Equipo -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row text-center mb-5">
+                <div class="col-12">
+                    <h2 class="display-5 fw-bold mb-3">Nuestro Equipo</h2>
+                    <p class="lead text-muted">Conoce a las personas que hacen posible nuestro éxito</p>
+                </div>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6">
+                    <div class="card card-custom text-center">
+                        <div class="card-body p-4">
+                            <img src="https://via.placeholder.com/150/007bff/ffffff?text=CEO" alt="CEO" class="team-img rounded-circle mb-3">
+                            <h5 class="fw-bold">María González</h5>
+                            <p class="text-primary mb-2">CEO & Fundadora</p>
+                            <p class="text-muted small">15 años de experiencia en liderazgo empresarial y estrategia corporativa.</p>
+                            <div class="social-links">
+                                <a href="#" class="text-primary me-2"><i class="bi bi-linkedin"></i></a>
+                                <a href="#" class="text-primary"><i class="bi bi-twitter"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="card card-custom text-center">
+                        <div class="card-body p-4">
+                            <img src="https://via.placeholder.com/150/28a745/ffffff?text=CTO" alt="CTO" class="team-img rounded-circle mb-3">
+                            <h5 class="fw-bold">Carlos Rodríguez</h5>
+                            <p class="text-success mb-2">Director Técnico</p>
+                            <p class="text-muted small">Especialista en tecnologías emergentes con más de 12 años de experiencia.</p>
+                            <div class="social-links">
+                                <a href="#" class="text-primary me-2"><i class="bi bi-linkedin"></i></a>
+                                <a href="#" class="text-primary"><i class="bi bi-github"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="card card-custom text-center">
+                        <div class="card-body p-4">
+                            <img src="https://via.placeholder.com/150/ffc107/ffffff?text=CMO" alt="CMO" class="team-img rounded-circle mb-3">
+                            <h5 class="fw-bold">Ana Martínez</h5>
+                            <p class="text-warning mb-2">Directora de Marketing</p>
+                            <p class="text-muted small">Experta en marketing digital y estrategias de comunicación corporativa.</p>
+                            <div class="social-links">
+                                <a href="#" class="text-primary me-2"><i class="bi bi-linkedin"></i></a>
+                                <a href="#" class="text-primary"><i class="bi bi-instagram"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="card card-custom text-center">
+                        <div class="card-body p-4">
+                            <img src="https://via.placeholder.com/150/dc3545/ffffff?text=CFO" alt="CFO" class="team-img rounded-circle mb-3">
+                            <h5 class="fw-bold">Roberto Silva</h5>
+                            <p class="text-danger mb-2">Director Financiero</p>
+                            <p class="text-muted small">Contador público con amplia experiencia en gestión financiera empresarial.</p>
+                            <div class="social-links">
+                                <a href="#" class="text-primary me-2"><i class="bi bi-linkedin"></i></a>
+                                <a href="#" class="text-primary"><i class="bi bi-envelope"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Compromisos -->
+    <section class="py-5 bg-dark text-white">
+        <div class="container">
+            <div class="row text-center mb-5">
+                <div class="col-12">
+                    <h2 class="display-5 fw-bold mb-3">Nuestros Compromisos</h2>
+                    <p class="lead">Lo que nos motiva cada día</p>
+                </div>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-4 text-center">
+                    <i class="bi bi-shield-check fs-1 text-success mb-3"></i>
+                    <h4>Calidad</h4>
+                    <p>Garantizamos los más altos estándares de calidad en todos nuestros productos y servicios.</p>
+                </div>
+                <div class="col-md-4 text-center">
+                    <i class="bi bi-lightbulb fs-1 text-warning mb-3"></i>
+                    <h4>Innovación</h4>
+                    <p>Invertimos constantemente en investigación y desarrollo para mantenernos a la vanguardia.</p>
+                </div>
+                <div class="col-md-4 text-center">
+                    <i class="bi bi-people fs-1 text-info mb-3"></i>
+                    <h4>Compromiso Social</h4>
+                    <p>Contribuimos activamente al desarrollo de nuestras comunidades y el medio ambiente.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certificaciones -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row text-center mb-5">
+                <div class="col-12">
+                    <h2 class="display-5 fw-bold mb-3">Certificaciones y Reconocimientos</h2>
+                    <p class="lead text-muted">Avalados por las mejores organizaciones</p>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="row g-4 text-center">
+                        <div class="col-md-3 col-6">
+                            <div class="card card-custom p-3">
+                                <i class="bi bi-award-fill fs-1 text-primary"></i>
+                                <h6 class="mt-2">ISO 9001</h6>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-6">
+                            <div class="card card-custom p-3">
+                                <i class="bi bi-patch-check-fill fs-1 text-success"></i>
+                                <h6 class="mt-2">ISO 14001</h6>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-6">
+                            <div class="card card-custom p-3">
+                                <i class="bi bi-shield-fill-check fs-1 text-info"></i>
+                                <h6 class="mt-2">Certificación A+</h6>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-6">
+                            <div class="card card-custom p-3">
+                                <i class="bi bi-star-fill fs-1 text-warning"></i>
+                                <h6 class="mt-2">Premio Excelencia</h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="py-5 bg-primary text-white">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-12">
+                    <h2 class="display-6 fw-bold mb-3">¿Listo para trabajar con nosotros?</h2>
+                    <p class="lead mb-4">Únete a los cientos de clientes que confían en nuestra experiencia</p>
+                    <div class="d-flex gap-3 justify-content-center flex-wrap">
+                        <button class="btn btn-light btn-lg">
+                            <i class="bi bi-telephone me-2"></i>Contáctanos
+                        </button>
+                        <button class="btn btn-outline-light btn-lg">
+                            <i class="bi bi-envelope me-2"></i>Enviar Email
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    
+    <script>
+        // Animación de contador para las estadísticas
+        function animateCounter(element, target) {
+            let count = 0;
+            const increment = target / 100;
+            const timer = setInterval(() => {
+                count += increment;
+                if (count >= target) {
+                    element.textContent = target + '+';
+                    clearInterval(timer);
+                } else {
+                    element.textContent = Math.ceil(count);
+                }
+            }, 20);
+        }
+
+        // Observador para animar cuando la sección sea visible
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const statNumbers = entry.target.querySelectorAll('.stat-number');
+                    statNumbers.forEach((stat, index) => {
+                        const targets = [500, 15, 100, 24];
+                        setTimeout(() => {
+                            animateCounter(stat, targets[index]);
+                        }, index * 200);
+                    });
+                    observer.unobserve(entry.target);
+                }
+            });
+        });
+
+        // Observar la sección de estadísticas
+        const statsSection = document.querySelector('.stats-section');
+        if (statsSection) {
+            observer.observe(statsSection);
+        }
+
+        // Efectos de hover suaves
+        document.querySelectorAll('.card-custom').forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                this.style.boxShadow = '0 8px 25px rgba(0, 0, 0, 0.15)';
+            });
+            
+            card.addEventListener('mouseleave', function() {
+                this.style.boxShadow = '0 4px 6px rgba(0, 0, 0, 0.1)';
+            });
+        });
+    </script>
+</body>
+</html>
